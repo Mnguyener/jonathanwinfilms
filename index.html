@@ -126,7 +126,7 @@
         let screenHeight = window.innerHeight;
 
         // Fade in when scrolling down (75% in view), fade out when scrolling back up
-        if (position < screenHeight * 0.9) {
+        if (position < screenHeight * 0.5) {
             text.classList.add("fade-in");
         } else {
             text.classList.remove("fade-in");
