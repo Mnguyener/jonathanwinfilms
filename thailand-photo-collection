@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #A7C7E7;  /* Change to green on hover */
+        }
+        /* Style for links container */
+        .header-links {
+            display: flex;
+            gap: 20px; /* Space between the links */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a href="index.html" class="logo">JONATHAN HOANG NGUYEN</a>
+    <div class="header-links">
+        <a href="about.html">About Me</a>
+        <a href="videoprojects.html">Videography</a>
+        <a href="mumbai-photo-collection.html">Mumbai Collection</a>
+        <a href="thailand-photo-collection.html">Thailand Collection</a>
+    </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .photo-gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+
+
+
+    <!-- Link back to the homepage -->
+    <p><a href="index.html">Back to Home</a></p>
+</body>
+</html>
+
+    <!-- Footer with social media links -->
+<footer>
+    <p>Follow me on:</p>
+    <ul>
+        <li><a href="https://www.instagram.com/jayna__win/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/jonathannguyens/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@jayna_win" target="_blank">YouTube</a></li>
+    </ul>
+</footer>
+
+<!-- Styling for the footer -->
+<style>
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    footer ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    footer a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    footer a:hover {
+        color: #A7C7E7;  /* Change to your desired hover color */
+    }
+</style>
+        
