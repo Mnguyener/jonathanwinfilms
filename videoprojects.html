@@ -7,7 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            padding-bottom: 60px; /* Ensure footer doesn't overlap content */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full page coverage */
         }
+
+        .content {
+            flex: 1; /* Pushes footer to the bottom */
+            text-align: center;
+            padding: 20px;
+        }
+
         /* Header Styles */
         header {
             display: flex;
@@ -17,18 +28,76 @@
             background-color: white;
             color: black;
         }
+
         header a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
+
         header a:hover {
-            color: #A7C7E7;  /* Change to green on hover */
+            color: #A7C7E7;
         }
+
         /* Style for links container */
         .header-links {
             display: flex;
-            gap: 20px; /* Space between the links */
+            gap: 20px;
+        }
+
+        /* Video Projects */
+        h2 {
+            color: #A7C7E7;
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+        }
+
+        iframe {
+            width: 40%;
+            height: 315px;
+            border: none;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #A7C7E7;
         }
     </style>
 </head>
@@ -45,54 +114,22 @@
     </div>
 </header>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Video Projects - My GitHub Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding-bottom: 60px;
-        }
-        h2 {
-            color: #A7C7E7;
-            text-align: center; /* Center the project headers */
-        }
-        p {
-            color: #333;
-        }
-        iframe {
-            width: 40%;
-            height: 315px;
-            border: none;
-            margin-bottom: 20px;
-            display: block;  /* Make the iframe a block-level element */
-            margin-left: auto;  /* Center the iframe */
-            margin-right: auto;  /* Center the iframe */
-        }
-    </style>
-</head>
-<body>
+<!-- Main Content -->
+<div class="content">
     <h1>My Video Projects</h1>
-    <p>Here are some of my video projects that I have been involved with. Some were made for my classes while others are just for fun! </p>
+    <p>Here are some of my video projects that I have been involved with. Some were made for my classes while others are just for fun!</p>
 
     <h2>TICK TOCK: An Exploration of Time in Mumbai and Seoul</h2>
-    <!-- Embed the YouTube video for Project 1 -->
     <iframe src="https://www.youtube.com/embed/KRjxcgxCvAw" title="Project 1" allowfullscreen></iframe>
 
     <h2>Friendship, Yielding</h2>
-    <!-- Embed the YouTube video for Project 2 -->
     <iframe src="https://www.youtube.com/embed/DXhsz2jAyhw" title="Project 2" allowfullscreen></iframe>
 
     <h2>David QuestBridge's Birthday 2023</h2>
-    <!-- Embed the YouTube video for Project 3 -->
     <iframe src="https://www.youtube.com/embed/1TMuNriIYEo" title="Project 3" allowfullscreen></iframe>
-</body>
-</html>
+</div>
 
-
-
-    <!-- Footer with social media links -->
+<!-- Footer -->
 <footer>
     <p>Follow me on:</p>
     <ul>
@@ -102,36 +139,5 @@
     </ul>
 </footer>
 
-<!-- Styling for the footer -->
-<style>
-   footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        position: relative; /* Change from fixed to relative */
-        width: 100%;
-        bottom: 0;
-        margin-top: 20px; /* Adds spacing between content and footer */
-    }    
-    footer p {
-        margin: 0;
-        font-size: 14px;
-    }
-    footer ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    footer ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-    footer a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-    footer a:hover {
-        color: #A7C7E7;  /* Change to your desired hover color */
-    }
-</style>
+</body>
+</html>
