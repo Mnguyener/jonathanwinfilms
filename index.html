@@ -5,58 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Website</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        /* Header Styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: white;
-            color: black;
-        }
-        header a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #A7C7E7;  /* Change to green on hover */
-        }
-        /* Style for links container */
-        .header-links {
-            display: flex;
-            gap: 20px; /* Space between the links */
-        }
-    </style>
-</head>
-<!-- Header Section -->
-<header>
-    <a href="index.html" class="logo">JONATHAN HOANG NGUYEN</a>
-    <div class="header-links">
-        <a href="about.html">About Me</a>
-        <a href="videoprojects.html">Videography</a>
-        <a href="mumbai-photo-collection.html">Mumbai Collection</a>
-        <a href="thailand-photo-collection.html">Thailand Collection</a>
-    </div>
-</header>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
-    <style>
+        /* General Styling */
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            height: 200vh; /* Adds scroll space for testing */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer stays at the bottom */
         }
 
         /* Header Styles */
@@ -68,22 +24,35 @@
             background-color: white;
             color: black;
         }
+
         header a {
             text-decoration: none;
             color: black;
             font-weight: bold;
         }
+
         header a:hover {
-            color: #A7C7E7;  /* Light blue hover effect */
+            color: #A7C7E7;
         }
 
-        /* Image container */
+        .header-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Content Wrapper */
+        .content {
+            flex: 1; /* Pushes footer down */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Image Container */
         .image-container {
             position: relative;
             width: 100%;
         }
 
-        /* Fullscreen Image */
         .image-container img {
             width: 100%;
             height: auto;
@@ -101,134 +70,98 @@
             font-weight: bold;
             text-align: center;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out; /* Smooth fade in/out */
+            transition: opacity 0.5s ease-in-out;
         }
 
-        /* JavaScript will add this class to make text visible */
         .fade-in {
             opacity: 1;
         }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #A7C7E7;
+        }
     </style>
 </head>
+
 <body>
 
-<!-- Clickable Image with Fading Text -->
-<a href="mumbai-photo-collection.html">
-    <div class="image-container">
-        <img src="IMG_0340.JPG" alt="Mumbai photo of kites">
-        <div class="overlay-text" id="text-overlay">Mumbai Collection</div>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">JONATHAN HOANG NGUYEN</a>
+        <div class="header-links">
+            <a href="about.html">About Me</a>
+            <a href="videoprojects.html">Videography</a>
+            <a href="mumbai-photo-collection.html">Mumbai Collection</a>
+            <a href="thailand-photo-collection.html">Thailand Collection</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <a href="mumbai-photo-collection.html">
+            <div class="image-container">
+                <img src="IMG_0340.JPG" alt="Mumbai photo of kites">
+                <div class="overlay-text" id="text-overlay">Mumbai Collection</div>
+            </div>
+        </a>
+
+        <img src="IMG_0317.JPG" alt="Pair of guys in Thailand" width="300">
     </div>
-</a>
 
-<script>
-    window.addEventListener("scroll", function() {
-        let text = document.getElementById("text-overlay");
-        let position = text.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
+    <!-- Footer -->
+    <footer>
+        <p>Follow me on:</p>
+        <ul>
+            <li><a href="https://www.instagram.com/jayna__win/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/jonathannguyens/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@jayna_win" target="_blank">YouTube</a></li>
+        </ul>
+    </footer>
 
-        // Fade in when scrolling down (75% in view), fade out when scrolling back up
-        if (position < screenHeight * 0.5) {
-            text.classList.add("fade-in");
-        } else {
-            text.classList.remove("fade-in");
-        }
-    });
-</script>
+    <script>
+        window.addEventListener("scroll", function() {
+            let text = document.getElementById("text-overlay");
+            let position = text.getBoundingClientRect().top;
+            let screenHeight = window.innerHeight;
+
+            if (position < screenHeight * 0.5) {
+                text.classList.add("fade-in");
+            } else {
+                text.classList.remove("fade-in");
+            }
+        });
+    </script>
 
 </body>
 </html>
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
-    <style>
-        body {
-            margin: 0;  /* Remove any default margins */
-            padding: 0;
-        }
-        img {
-            width: 100%;  /* Make the image fill the width of the screen */
-            height: auto;  /* Make the image fill the height of the screen */
-            object-fit: cover;  /* Ensures the image covers the screen without distortion */
-        }
-    </style>
-</head>
-<body>
-
-    
-<!-- Image Section -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
-    <style>
-        body {
-            margin: 0;  /* Remove any default margins */
-            padding: 0;
-        }
-        img {
-            width: 100%;  /* Make the image fill the width of the screen */
-            height: auto;  /* Make the image fill the height of the screen */
-            object-fit: cover;  /* Ensures the image covers the screen without distortion */
-        }
-    </style>
-</head>
-<body>
-
-
-
-    
-<!-- Image Section -->
-</head>
-<body>
-    <img src="IMG_0317.JPG" alt="Pair of guys in Thailand" width="300">
-
-
-    
-    <!-- Footer with social media links -->
-<footer>
-    <p>Follow me on:</p>
-    <ul>
-        <li><a href="https://www.instagram.com/jayna__win/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/jonathannguyens/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.youtube.com/@jayna_win" target="_blank">YouTube</a></li>
-    </ul>
-</footer>
-    
-<!-- Styling for the footer -->
-<style>
-
-        /* Footer Styles */
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        position: relative; /* Change from fixed to relative */
-        width: 100%;
-        bottom: 0;
-        margin-top: 20px; /* Adds spacing between content and footer */
-    }
-    footer p {
-        margin: 0;
-        font-size: 14px;
-    }
-    footer ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    footer ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-    footer a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-    }
-    footer a:hover {
-        color: #A7C7E7;  /* Change to your desired hover color */
-    }
-</style>
