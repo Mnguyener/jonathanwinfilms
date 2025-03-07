@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures footer stays at the bottom */
+            min-height: 100vh;
         }
 
         /* Header Styles */
@@ -42,16 +42,9 @@
 
         /* Content Wrapper */
         .content {
-            flex: 1; /* Pushes footer down */
+            flex: 1;
             text-align: center;
             padding: 0;
-        }
-
-        /* Image Styling */
-        .full-width-image {
-            width: 100vw; /* Full screen width */
-            height: auto;
-            display: block;
         }
 
         /* Image Container */
@@ -91,7 +84,7 @@
             text-align: center;
             padding: 10px;
             width: 100%;
-            margin-top: auto; /* Pushes footer to bottom */
+            margin-top: auto;
         }
 
         footer p {
@@ -140,12 +133,17 @@
         <a href="mumbai-photo-collection.html">
             <div class="image-container">
                 <img src="IMG_0340.JPG" alt="Mumbai photo of kites">
-                <div class="overlay-text" id="text-overlay">Mumbai Collection</div>
+                <div class="overlay-text">Mumbai Collection</div>
             </div>
         </a>
 
-        <!-- Second Image (Thailand) Full Width -->
-        <img src="IMG_0317.JPG" alt="Pair of guys in Thailand" class="full-width-image">
+        <!-- Thailand Collection Image -->
+        <a href="thailand-photo-collection.html">
+            <div class="image-container">
+                <img src="IMG_0317.JPG" alt="Pair of guys in Thailand">
+                <div class="overlay-text">Thailand Collection</div>
+            </div>
+        </a>
     </div>
 
     <!-- Footer -->
@@ -160,15 +158,18 @@
 
     <script>
         window.addEventListener("scroll", function() {
-            let text = document.getElementById("text-overlay");
-            let position = text.getBoundingClientRect().top;
-            let screenHeight = window.innerHeight;
+            let texts = document.querySelectorAll(".overlay-text");
 
-            if (position < screenHeight * 0.5) {
-                text.classList.add("fade-in");
-            } else {
-                text.classList.remove("fade-in");
-            }
+            texts.forEach(text => {
+                let position = text.getBoundingClientRect().top;
+                let screenHeight = window.innerHeight;
+
+                if (position < screenHeight * 0.5) {
+                    text.classList.add("fade-in");
+                } else {
+                    text.classList.remove("fade-in");
+                }
+            });
         });
     </script>
 
