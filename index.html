@@ -44,17 +44,24 @@
         .content {
             flex: 1; /* Pushes footer down */
             text-align: center;
-            padding: 20px;
+            padding: 0;
+        }
+
+        /* Image Styling */
+        .full-width-image {
+            width: 100vw; /* Full screen width */
+            height: auto;
+            display: block;
         }
 
         /* Image Container */
         .image-container {
             position: relative;
-            width: 100%;
+            width: 100vw;
         }
 
         .image-container img {
-            width: 100%;
+            width: 100vw;
             height: auto;
             display: block;
         }
@@ -129,6 +136,7 @@
 
     <!-- Main Content -->
     <div class="content">
+        <!-- Mumbai Collection Image -->
         <a href="mumbai-photo-collection.html">
             <div class="image-container">
                 <img src="IMG_0340.JPG" alt="Mumbai photo of kites">
@@ -136,7 +144,8 @@
             </div>
         </a>
 
-        <img src="IMG_0317.JPG" alt="Pair of guys in Thailand" width="300">
+        <!-- Second Image (Thailand) Full Width -->
+        <img src="IMG_0317.JPG" alt="Pair of guys in Thailand" class="full-width-image">
     </div>
 
     <!-- Footer -->
