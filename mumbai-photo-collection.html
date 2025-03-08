@@ -67,6 +67,23 @@
         .gallery img:hover {
             transform: scale(1.02);
         }
+
+
+        /* Full-width three-column layout */
+        .full-width-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+            gap: 0; /* No space between images */
+            padding: 0;
+            width: 100vw; /* Full width of the screen */
+        }
+        
+        /* Styling for full-width images */
+        .full-width-gallery img {
+            width: 100%;
+            height: 100vh; /* Full height of the screen */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }       
         
         /* Footer Styles */
         footer {
@@ -154,6 +171,15 @@
     <!-- Right Column (Vertical Photo) -->
     <img src="IMG_0308.JPG" alt="Dog sleeping in Thailand" class="right">
 </div>
+
+<!-- Third Gallery Section (Three Vertical Photos Filling Screen) -->
+<div class="gallery full-width-gallery">
+    <img src="IMG_0350.JPG" alt="Street scene in Mumbai" class="full">
+    <img src="IMG_0352.JPG" alt="Market vendor in Mumbai" class="full">
+    <img src="IMG_0354.JPG" alt="Sunset over Mumbai skyline" class="full">
+</div>
+
+
     
 
 <!-- Footer -->
