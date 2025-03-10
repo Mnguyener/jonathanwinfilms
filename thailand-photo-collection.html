@@ -11,6 +11,9 @@
             padding: 0;
             text-align: center;
             background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Header Styles */
@@ -30,7 +33,7 @@
         }
 
         header a:hover {
-            color: #A7C7E7; /* Light blue hover effect */
+            color: #A7C7E7;
         }
 
         .header-links {
@@ -38,52 +41,48 @@
             gap: 20px;
         }
 
-        /* Gallery Layout - Three Columns */
+        /* Gallery Layout */
         .gallery {
             display: grid;
-            grid-template-columns: 1fr 3fr 1fr; /* One column for left, one for center, one for right */
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding: 20px;
+            width: 80%;
+            margin: 0 auto;
         }
 
-        /* Left and Right Column (Vertical Photos) */
-        .gallery img.left, .gallery img.right {
+        .gallery img {
             width: 100%;
-            height: 460px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
             object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Center Column (Horizontal Photo) */
-        .gallery img.center {
-            width: 100%;
-            height: 460px;
-            object-fit: cover; /* Ensures the image fills the area without distortion */
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
         }
 
         .gallery img:hover {
             transform: scale(1.02);
         }
-        
+
+        .horizontal {
+            height: 300px;
+        }
+
+        .vertical {
+            height: 460px;
+        }
+
+        .square {
+            height: 400px;
+            width: 100%;
+        }
+
         /* Footer Styles */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px;
-            position: relative;
-            left: 0;
-            bottom: 0;
             width: 100%;
-            margin-top: 20px; /* Adds spacing between content and footer */
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
+            margin-top: auto;
         }
 
         footer ul {
@@ -105,15 +104,6 @@
         footer a:hover {
             color: #A7C7E7;
         }
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures the body takes full height of the viewport */
-        }
-
-        .content {
-            flex: 1; /* Pushes the footer to the bottom */
-        }
     </style>
 </head>
 <body>
@@ -134,27 +124,21 @@
 <p>A collection of my favorite photos from Thailand.</p>
 
 <div class="gallery">
-    <!-- Left Column (Vertical Photo) -->
-    <img src="IMG_0315.JPG" alt="Two motorcycles in Thailand" class="left">
-    
-    <!-- Center Column (Horizontal Photo) -->
-    <img src="IMG_0314.JPG" alt="Rooftop scenery in Thailand" class="center">
-    
-    <!-- Right Column (Vertical Photo) -->
-    <img src="IMG_0304.JPG" alt="Pair of bikers in Thailand" class="right">
+    <img src="IMG_0315.JPG" alt="Two motorcycles in Thailand" class="vertical">
+    <img src="IMG_0314.JPG" alt="Rooftop scenery in Thailand" class="horizontal">
+    <img src="IMG_0304.JPG" alt="Pair of bikers in Thailand" class="vertical">
+    <img src="IMG_0322.JPG" alt="Side profile of red car in Thailand" class="vertical">
+    <img src="IMG_0316.JPG" alt="Two guys in red in Thailand" class="horizontal">
+    <img src="IMG_0308.JPG" alt="Dog sleeping in Thailand" class="vertical">
+    <img src="IMG_0401.JPG" alt="Street market in Thailand" class="horizontal">
+    <img src="IMG_0402.JPG" alt="Temple in Thailand" class="horizontal">
+    <img src="IMG_0403.JPG" alt="Sunset over Thailand beach" class="horizontal">
+    <img src="IMG_0404.JPG" alt="Bustling Thailand street" class="horizontal">
+    <img src="IMG_0405.JPG" alt="Night lights in Thailand" class="horizontal">
+    <img src="IMG_0410.JPG" alt="Golden pagoda in Thailand" class="vertical">
+    <img src="IMG_0411.JPG" alt="Local artist in Thailand" class="vertical">
+    <img src="IMG_0412.JPG" alt="Floating market in Thailand" class="square">
 </div>
-
-<div class="gallery">
-    <!-- Left Column (Vertical Photo) -->
-    <img src="IMG_0322.JPG" alt="Side profile of red car in Thailand" class="left">
-    
-    <!-- Center Column (Horizontal Photo) -->
-    <img src="IMG_0316.JPG" alt="Two guys in red in Thailand" class="center">
-    
-    <!-- Right Column (Vertical Photo) -->
-    <img src="IMG_0308.JPG" alt="Dog sleeping in Thailand" class="right">
-</div>
-    
 
 <!-- Footer -->
 <footer>
@@ -167,4 +151,4 @@
 </footer>
 
 </body>
-</html>"
+</html>
