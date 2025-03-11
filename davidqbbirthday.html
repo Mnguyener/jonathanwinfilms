@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #A7C7E7; /* Light blue hover effect */
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Video Container */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 80%;
+            max-width: 900px;
+            height: 450px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Description */
+        .description {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            grid-template-rows: repeat(3, auto); /* Three rows */
+            gap: 20px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #A7C7E7;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <a href="index.html" class="logo">JONATHAN HOANG NGUYEN</a>
+    <div class="header-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="videoprojects.html">Videography</a>
+        <a href="mumbai-photo-collection.html">Mumbai Collection</a>
+        <a href="thailand-photo-collection.html">Thailand Collection</a>
+    </div>
+</header>
+
+<!-- Video Section -->
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/watch?v=1TMuNriIYEo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<!-- Description -->
+<div class="description">
+    <h2>About This Project</h2>
+    <p>Documentary of the squad pullin' up 45 minutes after the designated time to wish the boi Devito Toledo a happy birthday</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="photo-grid">
+    <img src="friyield1.jpg" alt="Still from video">
+    <img src="friyield2.jpg" alt="Still from video">
+    <img src="friyield3.jpg" alt="Still from video">
+    <img src="friyield4.jpg" alt="Still from video">
+    <img src="friyield5.jpg" alt="Still from video">
+    <img src="friyield6.jpg" alt="Still from video">
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Let's be friends</p>
+    <a href="https://www.instagram.com/jayna__win/" target="_blank">Instagram</a> |
+    <a href="https://www.linkedin.com/in/jonathannguyens/" target="_blank">LinkedIn</a> |
+    <a href="https://www.youtube.com/@jayna_win" target="_blank">YouTube</a>
+</footer>
+
+</body>
+</html>
