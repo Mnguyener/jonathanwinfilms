@@ -89,6 +89,33 @@
         }
 
 
+        /* Updated Full-width Three-column Layout */
+        .full-width-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+            gap: 20px; /* Adds spacing between images */
+            padding: 20px; /* Matches spacing of other galleries */
+            width: calc(100vw - 40px); /* Adjusts for padding */
+            margin: 0 auto; /* Centers the gallery */
+        }
+        
+        /* Styling for full-width images */
+        .full-width-gallery img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover; /* Ensures images fill the area without distortion */
+            border-radius: 8px; /* Matches rounded corners */
+            transition: transform 0.3s ease-in-out; /* Adds hover effect */
+        }
+        
+        .full-width-gallery img:hover {
+            transform: scale(1.02); /* Same subtle zoom effect */
+        }
+
+
+        
+
+
         /* Footer Styles */
         footer {
             background-color: #333;
@@ -173,6 +200,15 @@
     <img src="thailandphoto3.JPG" alt="Man hanging a light in Thailand">
     <img src="thailandphoto4.JPG" alt="Two people sitting near river in Thailand">
 </div>
+
+<!-- New three column Gallery -->
+<div class="full-width-gallery">
+    <img src="thailandphoto1.JPG" alt="Child getting photographed near river in Thailand">
+    <img src="thailandphoto2.JPG" alt="Fireworks over river in Thailand">
+    <img src="thailandphoto3.JPG" alt="Man hanging a light in Thailand">
+    <img src="thailandphoto4.JPG" alt="Two people sitting near river in Thailand">
+</div>
+    
 
 <!-- Footer -->
 <footer>
