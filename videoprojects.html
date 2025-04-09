@@ -68,8 +68,37 @@
         .video-link:hover {
             transform: scale(1.05);
         }
-
-
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            padding: 20px 0;
+        }
+        
+        .video-item {
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .video-link {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .video-link:hover {
+            transform: scale(1.05);
+        }
+        
+        .video-title {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            margin-top: 8px;
+        }
         /* Footer Styles */
         footer {
             background-color: #333;
@@ -125,21 +154,44 @@
     <h1>My Video Projects</h1>
     <p>Here are some of my video projects that I have been involved with. Some were made for my classes while others are just for fun!</p>
 
-    <h2>TICK TOCK: An Exploration of Time in Mumbai and Seoul</h2>
-    <a href="ticktockfilm.html">
-        <img src="ticktock1.jpg" alt="TICK TOCK Film Still" class="video-link">
-    </a>
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="ticktockfilm.html">
+                <img src="ticktock1.jpg" alt="TICK TOCK Film Still" class="video-link">
+            </a>
+            <p class="video-title">TICK TOCK: An Exploration of Time in Mumbai and Seoul</p>
+        </div>
 
-    <h2>Friendship, Yielding</h2>
-    <a href="friendshipyielding.html">
-        <img src="friyield4.jpg" alt="Friendship, Yielding Film Still" class="video-link">
-    </a>
+        <div class="video-item">
+            <a href="friendshipyielding.html">
+                <img src="friyield4.jpg" alt="Friendship, Yielding Film Still" class="video-link">
+            </a>
+            <p class="video-title">Friendship, Yielding</p>
+        </div>
 
-    <h2>David QuestBridge's Birthday 2023</h2>
-    <a href="davidqbbirthday.html">
-        <img src="dqbstill3.jpg" alt="David QuestBridge Birthday Film Still" class="video-link">
-    </a>
+        <div class="video-item">
+            <a href="davidqbbirthday.html">
+                <img src="dqbstill3.jpg" alt="David QuestBridge Birthday Film Still" class="video-link">
+            </a>
+            <p class="video-title">David QuestBridge's Birthday 2023</p>
+        </div>
+
+        <div class="video-item">
+            <a href="newfilm1.html">
+                <img src="newfilm1.jpg" alt="New Film 1 Still" class="video-link">
+            </a>
+            <p class="video-title">New Film Title 1</p>
+        </div>
+
+        <div class="video-item">
+            <a href="newfilm2.html">
+                <img src="newfilm2.jpg" alt="New Film 2 Still" class="video-link">
+            </a>
+            <p class="video-title">New Film Title 2</p>
+        </div>
+    </div>
 </div>
+
 
 <!-- Footer -->
 <footer>
